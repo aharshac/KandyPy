@@ -4,6 +4,7 @@ from .src.account import Account
 from .src.domain import Domain
 from .src.user import User
 from .src.device import Device
+from .src.group import Group
 
 
 
@@ -16,7 +17,7 @@ Account
     -Delete Domain
     -Get List of Domains
 
-    
+
 Domain
     -Get Domain Access Token
     -Delete Domain Access Token
@@ -34,19 +35,19 @@ User
     -Delete Device
     -Get List of Devices
 
-    
+
 Device
     -Get Device Addressbook
     -Delete Device Addressbook
     -Send a message
     -Get pending message
-    -Delete handled messages   
-    
-    
+    -Delete handled messages
+
+
 Groups
     Get all groups
     Create group
-    Get group by ID
+    -Get group by ID
     Destroy group
     Update Group
     Add members to group
@@ -54,7 +55,7 @@ Groups
     Leave group
     Mute/Unmute group
     Mute/Unmute members
-    Send Message
+    -Send Message
     Send Message Protocol
     Receive Message Protocol
 
