@@ -1,9 +1,19 @@
 # **Kandy**
-A Python REST API wrapper for Kandy.io
+A Python REST API wrapper for [Kandy.io](https://www.kandy.io/)
+
+Read the complete docs for the REST API at [Kandy Developers](https://developer.kandy.io/docs/rest-api)
+
+
+### INSTALLATION
+```
+pip install kandy
+```
 
 &nbsp;
 
-## **Account**
+# Package Reference
+
+## Class **Account**
 An account is automatically created for you when you register on the Kandy portal. An account has an API key and API secret, that are visible at the My Kandy section ("My Projects" tab) of the portal once you are logged in.
 
 The API key and API secret can be used to create an account access token, which is then used in API calls to perform activities that require account level privileges.
@@ -122,7 +132,7 @@ RETURN: (JSON)
 
 &nbsp;
 
-## **Domain** (Project)
+## Class **Domain** (Project)
 
 A domain is a collection of users that form a community (i.e. they can interact with each other through Kandy calls and messages). Once you have an account, you can create domains.
 
@@ -336,7 +346,7 @@ RETURN: (JSON)
 
 &nbsp;
 
-## **User**
+## Class **User**
 
 ```
 IMPORT:
@@ -442,7 +452,7 @@ RETURN: (JSON)
 
 &nbsp;
 
-## **Group**
+## Class **Group**
 Refer [Kandy docs](https://developer.kandy.io/docs/rest-api#groups) for error codes and additional info.
 
 ```
