@@ -442,6 +442,86 @@ RETURN: (JSON)
 
 &nbsp;
 
+## **Group**
+Refer [Kandy docs](https://developer.kandy.io/docs/rest-api#groups) for error codes and additional info.
+
+```
+IMPORT:
+from Kandy import Group
+```
+
+### Get group by ID
+```
+FUNCTION:
+get_group_by_id(user_access_token, group_id)
+
+ARGS:
+user_access_token = Access token of User (string, required)
+group_id = Group ID (string, required)
+
+RETURN: (JSON)
+{
+  "result":{
+    'group_id':'834f42eb5a1144a3b679f2d0be20112c',
+    'group_name':'asd',
+    'group_image':{},
+    'max_members':'50',
+    'owners':[{'full_user_id':'admin1@kandy.com', 'muted': false},{'full_user_id':'admin2@kandy.com','muted':true}]
+    }]
+    'creation_time':1426176529057,
+    'members':[
+      {'full_user_id':'member1@kandy.com', 'muted': false},
+      {'full_user_id':'member2@kandy.com','muted':true}
+    ]}],
+    'muted': false
+  },
+  "status": 0,
+  "message": "success"
+}
+```
+
+### Send Message
+Send a chat message to all members of a group
+```
+FUNCTION:
+send_message(user_access_token, message)
+
+ARGS:
+user_access_token = Access token of User (string, required)
+message = (JSON, required)
+
+TYPICAL message: (JSON)
+{
+  "message":
+  {
+    "contentType":"text",
+    "group_id":<destination group id, string, mandatory>,
+    "UUID":<message UUID, string, mandatory>,
+    "message":
+    {
+      "mimeType": "text/plain",
+      "text": "this is the text to send"
+   }
+  }
+}
+
+RETURN: (JSON)
+{
+  "status": 0,
+  "message": "success"
+}
+
+STATUS codes:
+1 - internal error
+3 - missing parameters
+700 - "group not found"
+701 - "user not found"
+702 - "requesting user not in group"
+710 - "message in an invalid format"
+```
+
+&nbsp;
+
 ## **Device**
 
 ```
