@@ -403,7 +403,7 @@ delete_device(user_access_token, device_id)
 
 ARGS:
 user_access_token = Access token of User (string, required)
-device_id = Device ID of the device to be deleted (JSON, required)
+device_id = Device ID of the device to be deleted (string, required)
 
 RETURN: (JSON)
 {
@@ -437,5 +437,168 @@ RETURN: (JSON)
       }
     ]
   }
+}
+```
+
+&nbsp;
+
+## **Device**
+
+```
+IMPORT:
+from Kandy import Device
+```
+
+### Get Device Address book
+Get address book of a device with hints
+```
+FUNCTION:
+get_device_address_book(user_access_token, device_id)
+
+ARGS:
+user_access_token = Access token of User (string, required)
+device_id = Device ID of the device (string, required)
+
+RETURN: (JSON)
+{
+  "status": 0,
+  "message": "success",
+  "result": {
+    "contacts": [
+      {
+        "number": "+14055671234",
+        "contactId": "",
+        "deviceId": "3d405f6dfd9842a981a90daaf0da08fa",
+        "firstName": "John",
+        "lastName": "Doe",
+        "hintType": "none"
+      },
+      {
+        "number": "0555512345",
+        "contactId": "",
+        "deviceId": "3d405f6dfd9842a981a90daaf0da08fa",
+        "firstName": "Jane",
+        "lastName": "Doe",
+        "hintType": "none"
+      },
+      {
+        "number": "+14055671234",
+        "contactId": "",
+        "deviceId": "3d405f6dfd9842a981a90daaf0da08fa",
+        "firstName": "Jane",
+        "lastName": "Doe",
+        "hintType": "none"
+      }
+    ]
+  }
+}
+```
+
+### Delete Device Address book
+Delete an address book of a device
+```
+FUNCTION:
+delete_device_address_book(user_access_token, device_id)
+
+ARGS:
+user_access_token = Access token of User (string, required)
+device_id = Device ID of the device (string, required)
+
+RETURN: (JSON)
+{
+  "status": 0,
+  "message": "success"
+}
+```
+
+### Send a message
+Send a single message to a single destination.
+Refer [Kandy docs](https://developer.kandy.io/docs/rest-api#device-send-a-message) for additional info.
+```
+FUNCTION:
+send_message(user_access_token, device_id, message)
+
+ARGS:
+user_access_token = Access token of User (string, required)
+device_id = Device ID of the device (string, required)
+message = (JSON, required)
+
+TYPICAL message: (JSON)
+{
+  "message": {
+    "content_type": "text",
+    "destination": "972542205056@domain.com",
+    "UUID": "abc2fa752c3c4edf97de8b0a12f622f0",
+    "message": {
+      "mimeType": "text/plain",
+      "text": "let's meet tonight"
+    }
+  }
+}
+
+RETURN: (JSON)
+{
+  "status": 0,
+  "message": "success"
+}
+```
+
+### Get Pending Messages
+Retrieve list of messages waiting for a device
+```
+FUNCTION:
+get_pending_messages(user_access_token, device_id, client_timestamp)
+
+ARGS:
+user_access_token = Access token of User (string, required)
+device_id = Device ID of the device (string, required)
+client_timestamp = 	Client timestamp - UTC UNIX timestamp(e.g. "1409754477079"). If not provided it will be assumed the client clock is synchronized properly. (string, optional)
+
+RETURN: (JSON)
+{
+  "status": 0,
+  "message": "success",
+  "result": {
+    "messages": [
+      {
+        "messageType": "chat",
+        "sender": {
+          "user_id": "972542205066",
+          "domain_name": "domain.com",
+          "full_user_id": "972542205066@domain.com"
+        },
+        "UUID": "bcd2fa752c3c4fdf97d08b0a48f622f0",
+        "timestamp": "1400510413",
+        "message": {
+          "mimeType": "text/plain",
+          "text": "let's meet tonight"
+        }
+      },
+      {
+        "messageType": "chatRemoteAck",
+        "timestamp": "1400510413",
+        "UUID": "080eccac08d54c9a949058f3a633a30c"
+      }
+    ]
+  }
+}
+```
+
+### Delete handled message
+Delete a message (typically after it was handled)
+```
+FUNCTION:
+delete_handled_messages(user_access_token, device_id, messages)
+
+ARGS:
+user_access_token = Access token of User (string, required)
+device_id = Device ID of the device (string, required)
+messages = JSON array of message IDs to delete (string, required)
+
+
+RETURN: (JSON)
+{
+  "status": 0,
+  "message": "success"
 }
 ```
