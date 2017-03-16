@@ -1,12 +1,15 @@
 **Kandy**
 =========
 
-A Python REST API wrapper for [Kandy.io](https://www.kandy.io/)
+A Python REST API wrapper for `Kandy.io <https://www.kandy.io/>`__
 
-Read the complete docs for the REST API at [Kandy
-Developers](https://developer.kandy.io/docs/rest-api)
+Read the complete docs for the REST API at `Kandy
+Developers <https://developer.kandy.io/docs/rest-api>`__
 
-### INSTALLATION
+INSTALLATION
+------------
+
+::
 
     pip install kandy
 
@@ -29,17 +32,20 @@ require account level privileges.
 
 These actions include:
 
--   Domain management
--   Account authentication management
+-  Domain management
+-  Account authentication management
 
-<!-- -->
+::
 
     IMPORT:
     from Kandy import Account
 
-### Get Account Access Token
+Get Account Access Token
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 Get access token for an account (server side).
+
+::
 
     FUNCTION:
     get_account_access_token(api_key, api_secret)
@@ -57,9 +63,12 @@ Get access token for an account (server side).
       }
     }
 
-### Delete Account Access Token
+Delete Account Access Token
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Delete account access token (server side).
+
+::
 
     FUNCTION:
     delete_account_access_token(api_key, account_api_secret, account_access_token)
@@ -75,7 +84,10 @@ Delete account access token (server side).
       "message": "success"
     }
 
-### Create Domain
+Create Domain
+~~~~~~~~~~~~~
+
+::
 
     FUNCTION:
     create_domain(account_access_token, domain_name, project_name)
@@ -91,7 +103,10 @@ Delete account access token (server side).
       "project_name": "test domain for my account"
     }
 
-### Delete Domain
+Delete Domain
+~~~~~~~~~~~~~
+
+::
 
     FUNCTION:
     delete_domain(account_access_token, domain_api_key)
@@ -106,7 +121,10 @@ Delete account access token (server side).
       "message": "Domain Deleted"
     }
 
-### Get List of Domains
+Get List of Domains
+~~~~~~~~~~~~~~~~~~~
+
+::
 
     FUNCTION:
     get_domains(account_access_token)
@@ -152,18 +170,21 @@ domain level privileges to do.
 
 These actions include:
 
--   User management
--   Hunt group management
--   Various general services
+-  User management
+-  Hunt group management
+-  Various general services
 
-<!-- -->
+::
 
     IMPORT:
     from Kandy import Domain
 
-### Get Domain Access Token
+Get Domain Access Token
+~~~~~~~~~~~~~~~~~~~~~~~
 
 Get access token for a domain
+
+::
 
     FUNCTION:
     get_domain_access_token(domain_api_key, domain_api_secret)
@@ -181,9 +202,12 @@ Get access token for a domain
       }
     }
 
-### Delete Domain Access Token
+Delete Domain Access Token
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Revoke access token for a domain
+
+::
 
     FUNCTION:
     delete_domain_access_token(domain_api_key, domain_api_secret, domain_access_token)
@@ -199,10 +223,13 @@ Revoke access token for a domain
       "message": "success"
     }
 
-### Limited Domain Detail
+Limited Domain Detail
+~~~~~~~~~~~~~~~~~~~~~
 
-Get limited details of a domain by domain access token  
-Validates the existence of a provided domain key.
+| Get limited details of a domain by domain access token
+| Validates the existence of a provided domain key.
+
+::
 
     FUNCTION:
     get_limited_domain_detail(domain_api_key, domain_api_secret, domain_access_token)
@@ -230,11 +257,14 @@ Validates the existence of a provided domain key.
       }
     }
 
-### Create user by Phone Number
+Create user by Phone Number
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Refer [Kandy
-docs](https://developer.kandy.io/docs/rest-api#domain-create-user-by-phone-number)
+Refer `Kandy
+docs <https://developer.kandy.io/docs/rest-api#domain-create-user-by-phone-number>`__
 for additional info.
+
+::
 
     FUNCTION:
     create_user_by_phone_number(domain_access_token, user_details)
@@ -255,11 +285,14 @@ for additional info.
       "message": "success"
     }
 
-### Create user by User ID
+Create user by User ID
+~~~~~~~~~~~~~~~~~~~~~~
 
-Refer [Kandy
-docs](https://developer.kandy.io/docs/rest-api#domain-create-user-by-userid)
+Refer `Kandy
+docs <https://developer.kandy.io/docs/rest-api#domain-create-user-by-userid>`__
 for additional info.
+
+::
 
     FUNCTION:
      create_user_by_user_id(domain_access_token, user_details):
@@ -280,7 +313,10 @@ for additional info.
       "message": "success"
     }
 
-### Delete User
+Delete User
+~~~~~~~~~~~
+
+::
 
     FUNCTION:
     delete_user(user_api_key)
@@ -294,9 +330,12 @@ for additional info.
       "message": "User Deleted"
     }
 
-### Get List of Users
+Get List of Users
+~~~~~~~~~~~~~~~~~
 
 Returns listing of known Kandy users for domain
+
+::
 
     FUNCTION:
     get_users(domain_access_token)
@@ -322,9 +361,12 @@ Returns listing of known Kandy users for domain
       }
     }
 
-### Get User Details
+Get User Details
+~~~~~~~~~~~~~~~~
 
 Get full details of a user.
+
+::
 
     FUNCTION:
     get_user_details(domain_access_token, user_access_token)
@@ -356,14 +398,19 @@ Get full details of a user.
 Class **User**
 --------------
 
+::
+
     IMPORT:
     from Kandy import User
 
-### Get User Access Token
+Get User Access Token
+~~~~~~~~~~~~~~~~~~~~~
 
-Get access token for a User  
-This server side API provides an account access token after securely
-sending the API secret of the account.
+| Get access token for a User
+| This server side API provides an account access token after securely
+  sending the API secret of the account.
+
+::
 
     FUNCTION:
     get_user_access_token(domain_api_key, domain_api_secret, user_id)
@@ -382,12 +429,15 @@ sending the API secret of the account.
       }
     }
 
-### Create Device
+Create Device
+~~~~~~~~~~~~~
 
-This will create/establish a new device to the user.  
-Refer [Kandy
-docs](https://developer.kandy.io/docs/rest-api#user-create-device) for
-additional info.
+| This will create/establish a new device to the user.
+| Refer `Kandy
+  docs <https://developer.kandy.io/docs/rest-api#user-create-device>`__
+  for additional info.
+
+::
 
     FUNCTION:
     create_device(user_access_token, device_details)
@@ -414,9 +464,12 @@ additional info.
       }
     }
 
-### Delete Device
+Delete Device
+~~~~~~~~~~~~~
 
 Delete an existing domain user
+
+::
 
     FUNCTION:
     delete_device(user_access_token, device_id)
@@ -431,9 +484,12 @@ Delete an existing domain user
       "message": "Device Deleted"
     }
 
-### Get List of Devices
+Get List of Devices
+~~~~~~~~~~~~~~~~~~~
 
 Retrieve list of all user devices
+
+::
 
     FUNCTION:
     get_devices(self, user_access_token)
@@ -464,13 +520,18 @@ Retrieve list of all user devices
 Class **Group**
 ---------------
 
-Refer [Kandy docs](https://developer.kandy.io/docs/rest-api#groups) for
-error codes and additional info.
+Refer `Kandy docs <https://developer.kandy.io/docs/rest-api#groups>`__
+for error codes and additional info.
+
+::
 
     IMPORT:
     from Kandy import Group
 
-### Get group by ID
+Get group by ID
+~~~~~~~~~~~~~~~
+
+::
 
     FUNCTION:
     get_group_by_id(user_access_token, group_id)
@@ -499,9 +560,12 @@ error codes and additional info.
       "message": "success"
     }
 
-### Send Message
+Send Message
+~~~~~~~~~~~~
 
 Send a chat message to all members of a group
+
+::
 
     FUNCTION:
     send_message(user_access_token, message)
@@ -544,12 +608,17 @@ Send a chat message to all members of a group
 **Device**
 ----------
 
+::
+
     IMPORT:
     from Kandy import Device
 
-### Get Device Address book
+Get Device Address book
+~~~~~~~~~~~~~~~~~~~~~~~
 
 Get address book of a device with hints
+
+::
 
     FUNCTION:
     get_device_address_book(user_access_token, device_id)
@@ -592,9 +661,12 @@ Get address book of a device with hints
       }
     }
 
-### Delete Device Address book
+Delete Device Address book
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Delete an address book of a device
+
+::
 
     FUNCTION:
     delete_device_address_book(user_access_token, device_id)
@@ -609,12 +681,15 @@ Delete an address book of a device
       "message": "success"
     }
 
-### Send a message
+Send a message
+~~~~~~~~~~~~~~
 
-Send a single message to a single destination.  
-Refer [Kandy
-docs](https://developer.kandy.io/docs/rest-api#device-send-a-message)
-for additional info.
+| Send a single message to a single destination.
+| Refer `Kandy
+  docs <https://developer.kandy.io/docs/rest-api#device-send-a-message>`__
+  for additional info.
+
+::
 
     FUNCTION:
     send_message(user_access_token, device_id, message)
@@ -643,9 +718,12 @@ for additional info.
       "message": "success"
     }
 
-### Get Pending Messages
+Get Pending Messages
+~~~~~~~~~~~~~~~~~~~~
 
 Retrieve list of messages waiting for a device
+
+::
 
     FUNCTION:
     get_pending_messages(user_access_token, device_id, client_timestamp)
@@ -684,9 +762,12 @@ Retrieve list of messages waiting for a device
       }
     }
 
-### Delete handled message
+Delete handled message
+~~~~~~~~~~~~~~~~~~~~~~
 
 Delete a message (typically after it was handled)
+
+::
 
     FUNCTION:
     delete_handled_messages(user_access_token, device_id, messages)

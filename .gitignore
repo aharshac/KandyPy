@@ -94,3 +94,5 @@ ENV/
 .ropeproject
 
 .pypirc
+
+release.txt

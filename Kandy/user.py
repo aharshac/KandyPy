@@ -1,4 +1,4 @@
-from Kandy.src import util
+import util
 
 class User:
     def get_user_access_token(self, domain_api_key, domain_api_secret, user_id):

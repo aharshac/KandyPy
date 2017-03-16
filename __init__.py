@@ -1,4 +1,5 @@
 #import Kandy.src.util
+"""
 from .src import util
 from .src.account import Account
 from .src.domain import Domain
@@ -7,6 +8,8 @@ from .src.device import Device
 from .src.group import Group
 
 __all__ = ['Account', 'Domain', 'User', 'Device', 'Group']
+"""
+
 
 """
 
