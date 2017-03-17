@@ -32,6 +32,7 @@ These actions include:
 -   Domain management
 -   Account authentication management
 
+<!-- -->
 
     IMPORT:
     from Kandy import Account
@@ -155,7 +156,7 @@ These actions include:
 -   Hunt group management
 -   Various general services
 
-
+<!-- -->
 
     IMPORT:
     from Kandy import Domain
@@ -435,7 +436,7 @@ Delete an existing domain user
 Retrieve list of all user devices
 
     FUNCTION:
-    get_devices(self, user_access_token)
+    get_devices(user_access_token)
 
     ARGS:
     user_access_token = Access token of User (string, required)
@@ -635,6 +636,26 @@ for additional info.
         }
       }
     }
+
+    RETURN: (JSON)
+    {
+      "status": 0,
+      "message": "success"
+    }
+
+### Send an SMS
+
+Send an SMS to a mobile number
+
+    FUNCTION:
+    send_sms(user_access_token, device_id, source, destination, text)
+
+    ARGS:
+    user_access_token = Access token of User (string, required)
+    device_id = Device ID of the device (string, required)
+    source = Sender's phone number (string, required)
+    destination = Recipient's phone number (string, required)
+    text = Message to be sent (string, required)
 
     RETURN: (JSON)
     {

@@ -96,3 +96,9 @@ ENV/
 .pypirc
 
 release.txt
+
+README.html
+
+test
+
+*.bat
