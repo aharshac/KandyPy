@@ -17,6 +17,7 @@ Installation
 
 |
 |
+|
 
 Package Reference
 =================
@@ -44,6 +45,8 @@ These actions include:
     IMPORT:
     from Kandy import Account
 
+|
+
 Get Account Access Token
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -67,6 +70,8 @@ Get access token for an account (server side).
       }
     }
 
+|
+
 Delete Account Access Token
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -88,6 +93,8 @@ Delete account access token (server side).
       "message": "success"
     }
 
+|
+
 Create Domain
 ~~~~~~~~~~~~~
 
@@ -107,6 +114,8 @@ Create Domain
       "project_name": "test domain for my account"
     }
 
+|
+
 Delete Domain
 ~~~~~~~~~~~~~
 
@@ -124,6 +133,8 @@ Delete Domain
       "status": 0,
       "message": "Domain Deleted"
     }
+
+|
 
 Get List of Domains
 ~~~~~~~~~~~~~~~~~~~
@@ -157,6 +168,7 @@ Get List of Domains
     }
 
 |
+|
 
 Class **Domain** (Project)
 --------------------------
@@ -184,10 +196,12 @@ These actions include:
     IMPORT:
     from Kandy import Domain
 
+|
+
 Get Domain Access Token
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-Get access token for a domain
+Get access token for a domain.
 
 ::
 
@@ -207,10 +221,12 @@ Get access token for a domain
       }
     }
 
+|
+
 Delete Domain Access Token
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Revoke access token for a domain
+Revoke access token for a domain.
 
 ::
 
@@ -228,11 +244,13 @@ Revoke access token for a domain
       "message": "success"
     }
 
+|
+
 Limited Domain Detail
 ~~~~~~~~~~~~~~~~~~~~~
 
-| Get limited details of a domain by domain access token
-| Validates the existence of a provided domain key.
+Get limited details of a domain by domain access token.
+Validates the existence of a provided domain key.
 
 ::
 
@@ -262,12 +280,12 @@ Limited Domain Detail
       }
     }
 
+|
+
 Create user by Phone Number
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Refer `Kandy
-docs <https://developer.kandy.io/docs/rest-api#domain-create-user-by-phone-number>`__
-for additional info.
+Refer `Kandy docs <https://developer.kandy.io/docs/rest-api#domain-create-user-by-phone-number>`__ for additional info.
 
 ::
 
@@ -290,12 +308,12 @@ for additional info.
       "message": "success"
     }
 
+|
+
 Create user by User ID
 ~~~~~~~~~~~~~~~~~~~~~~
 
-Refer `Kandy
-docs <https://developer.kandy.io/docs/rest-api#domain-create-user-by-userid>`__
-for additional info.
+Refer `Kandy docs <https://developer.kandy.io/docs/rest-api#domain-create-user-by-userid>`__ for additional info.
 
 ::
 
@@ -318,6 +336,8 @@ for additional info.
       "message": "success"
     }
 
+|
+
 Delete User
 ~~~~~~~~~~~
 
@@ -335,10 +355,12 @@ Delete User
       "message": "User Deleted"
     }
 
+|
+
 Get List of Users
 ~~~~~~~~~~~~~~~~~
 
-Returns listing of known Kandy users for domain
+Returns listing of known Kandy users for domain.
 
 ::
 
@@ -365,6 +387,8 @@ Returns listing of known Kandy users for domain
         ]
       }
     }
+
+|
 
 Get User Details
 ~~~~~~~~~~~~~~~~
@@ -399,6 +423,7 @@ Get full details of a user.
     }
 
 |
+|
 
 Class **User**
 --------------
@@ -408,12 +433,13 @@ Class **User**
     IMPORT:
     from Kandy import User
 
+|
+
 Get User Access Token
 ~~~~~~~~~~~~~~~~~~~~~
 
-| Get access token for a User
-| This server side API provides an account access token after securely
-  sending the API secret of the account.
+Get access token for a User.
+This server side API provides an account access token after securely sending the API secret of the account.
 
 ::
 
@@ -434,13 +460,13 @@ Get User Access Token
       }
     }
 
+|
+
 Create Device
 ~~~~~~~~~~~~~
 
-| This will create/establish a new device to the user.
-| Refer `Kandy
-  docs <https://developer.kandy.io/docs/rest-api#user-create-device>`__
-  for additional info.
+This will create/establish a new device to the user.
+Refer `Kandy docs <https://developer.kandy.io/docs/rest-api#user-create-device>`__ for additional info.
 
 ::
 
@@ -469,10 +495,12 @@ Create Device
       }
     }
 
+|
+
 Delete Device
 ~~~~~~~~~~~~~
 
-Delete an existing domain user
+Delete an existing domain user.
 
 ::
 
@@ -489,10 +517,12 @@ Delete an existing domain user
       "message": "Device Deleted"
     }
 
+|
+
 Get List of Devices
 ~~~~~~~~~~~~~~~~~~~
 
-Retrieve list of all user devices
+Retrieve list of all user devices.
 
 ::
 
@@ -521,17 +551,19 @@ Retrieve list of all user devices
     }
 
 |
+|
 
 Class **Group**
 ---------------
 
-Refer `Kandy docs <https://developer.kandy.io/docs/rest-api#groups>`__
-for error codes and additional info.
+Refer `Kandy docs <https://developer.kandy.io/docs/rest-api#groups>`__ for error codes and additional info.
 
 ::
 
     IMPORT:
     from Kandy import Group
+
+|
 
 Get group by ID
 ~~~~~~~~~~~~~~~
@@ -565,10 +597,12 @@ Get group by ID
       "message": "success"
     }
 
+|
+
 Send Message
 ~~~~~~~~~~~~
 
-Send a chat message to all members of a group
+Send a chat message to all members of a group.
 
 ::
 
@@ -609,6 +643,7 @@ Send a chat message to all members of a group
     710 - "message in an invalid format"
 
 |
+|
 
 **Device**
 ----------
@@ -618,10 +653,12 @@ Send a chat message to all members of a group
     IMPORT:
     from Kandy import Device
 
+|
+
 Get Device Address book
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-Get address book of a device with hints
+Get address book of a device with hints.
 
 ::
 
@@ -666,10 +703,12 @@ Get address book of a device with hints
       }
     }
 
+|
+
 Delete Device Address book
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Delete an address book of a device
+Delete an address book of a device.
 
 ::
 
@@ -686,13 +725,13 @@ Delete an address book of a device
       "message": "success"
     }
 
+|
+
 Send a message
 ~~~~~~~~~~~~~~
 
-| Send a single message to a single destination.
-| Refer `Kandy
-  docs <https://developer.kandy.io/docs/rest-api#device-send-a-message>`__
-  for additional info.
+Send a single message to a single destination.
+Refer `Kandy docs <https://developer.kandy.io/docs/rest-api#device-send-a-message>`__ for additional info.
 
 ::
 
@@ -723,10 +762,12 @@ Send a message
       "message": "success"
     }
 
+|
+
 Send an SMS
 ~~~~~~~~~~~
 
-Send an SMS to a mobile number
+Send an SMS to a mobile number.
 
 ::
 
@@ -746,10 +787,12 @@ Send an SMS to a mobile number
       "message": "success"
     }
 
+|
+
 Get Pending Messages
 ~~~~~~~~~~~~~~~~~~~~
 
-Retrieve list of messages waiting for a device
+Retrieve list of messages waiting for a device.
 
 ::
 
@@ -790,10 +833,12 @@ Retrieve list of messages waiting for a device
       }
     }
 
+|
+
 Delete handled message
 ~~~~~~~~~~~~~~~~~~~~~~
 
-Delete a message (typically after it was handled)
+Delete a message (typically after it was handled).
 
 ::
 
