@@ -1,8 +1,8 @@
 #from . import util
-from .account import Account
-from .domain import Domain
-from .user import User
-from .device import Device
-from .group import Group
+from . import account as Account
+from . import domain as Domain
+from . import user as User
+from . import device as Device
+from . import group as Group
 
 __all__ = ['Account', 'Domain', 'User', 'Device', 'Group']
