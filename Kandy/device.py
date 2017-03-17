@@ -1,4 +1,4 @@
-import util
+from . import util
 
 class Device:
     def get_device_address_book(self, user_access_token, device_id):

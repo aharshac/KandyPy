@@ -1,4 +1,4 @@
-import util
+from . import util
 
 class Group:
     def get_group_by_id(self, user_access_token, group_id):

@@ -1,4 +1,4 @@
-import util
+from . import util
 
 class Account:
     def get_account_access_token(self, api_key, account_api_secret):

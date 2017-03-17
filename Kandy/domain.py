@@ -1,4 +1,4 @@
-import util
+from . import util
 
 class Domain:
     def get_domain_access_token(self, domain_api_key, domain_api_secret):
