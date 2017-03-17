@@ -6,14 +6,17 @@ A Python REST API wrapper for `Kandy.io <https://www.kandy.io/>`__
 Read the complete docs for the REST API at `Kandy
 Developers <https://developer.kandy.io/docs/rest-api>`__
 
-INSTALLATION
+|
+
+Installation
 ------------
 
 ::
 
     pip install kandy
 
- 
+|
+|
 
 Package Reference
 =================
@@ -153,7 +156,7 @@ Get List of Domains
       }
     }
 
- 
+|
 
 Class **Domain** (Project)
 --------------------------
@@ -395,7 +398,7 @@ Get full details of a user.
       }
     }
 
- 
+|
 
 Class **User**
 --------------
@@ -517,7 +520,7 @@ Retrieve list of all user devices
       }
     }
 
- 
+|
 
 Class **Group**
 ---------------
@@ -605,7 +608,7 @@ Send a chat message to all members of a group
     702 - "requesting user not in group"
     710 - "message in an invalid format"
 
- 
+|
 
 **Device**
 ----------

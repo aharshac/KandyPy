@@ -32,7 +32,6 @@ These actions include:
 -   Domain management
 -   Account authentication management
 
-<!-- -->
 
     IMPORT:
     from Kandy import Account
@@ -156,7 +155,6 @@ These actions include:
 -   Hunt group management
 -   Various general services
 
-<!-- -->
 
     IMPORT:
     from Kandy import Domain
