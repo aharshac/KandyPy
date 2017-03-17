@@ -19,8 +19,10 @@ Installation
 |
 |
 
-Package Reference
-=================
+**Package Reference**
+=====================
+
+|
 
 Class **Account**
 -----------------
