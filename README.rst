@@ -98,6 +98,7 @@ Delete account access token (server side).
 Create Domain
 ~~~~~~~~~~~~~
 
+
 ::
 
     FUNCTION:
@@ -119,6 +120,7 @@ Create Domain
 Delete Domain
 ~~~~~~~~~~~~~
 
+
 ::
 
     FUNCTION:
@@ -138,6 +140,7 @@ Delete Domain
 
 Get List of Domains
 ~~~~~~~~~~~~~~~~~~~
+
 
 ::
 
@@ -341,6 +344,7 @@ Refer `Kandy docs <https://developer.kandy.io/docs/rest-api#domain-create-user-b
 Delete User
 ~~~~~~~~~~~
 
+
 ::
 
     FUNCTION:
@@ -427,6 +431,7 @@ Get full details of a user.
 
 Class **User**
 --------------
+
 
 ::
 
@@ -568,6 +573,7 @@ Refer `Kandy docs <https://developer.kandy.io/docs/rest-api#groups>`__ for error
 Get group by ID
 ~~~~~~~~~~~~~~~
 
+
 ::
 
     FUNCTION:
@@ -647,6 +653,7 @@ Send a chat message to all members of a group.
 
 **Device**
 ----------
+
 
 ::
 
